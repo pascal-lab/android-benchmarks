@@ -1,3 +1,4 @@
 [submodule "android-platforms"]
 	path = android-platforms
-	url = https://github.com/pascal-lab/android-platforms.git
+	url = ../android-platforms.git
+    branch = master
