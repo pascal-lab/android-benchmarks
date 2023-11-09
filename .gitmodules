@@ -2,3 +2,7 @@
 	path = android-platforms
 	url = ../android-platforms.git
     branch = master
+[submodule "DroidBench"]
+	path = DroidBench
+	url = ../DroidBench.git
+	branch = develop
