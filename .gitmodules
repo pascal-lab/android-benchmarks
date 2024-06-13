@@ -10,3 +10,6 @@
 	path = UBCBench
 	url = ../UBCBench.git
 	branch = master
+[submodule "ICC-Bench"]
+	path = ICC-Bench
+	url = ../ICC-Bench.git
