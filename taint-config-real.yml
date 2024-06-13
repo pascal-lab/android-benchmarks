@@ -1,0 +1,189 @@
+sources:
+  - { kind: call, method: "<android.content.ClipData$Item: java.lang.CharSequence getText()>", index: result }
+  - { kind: call, method: "<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>", index: result }
+  - { kind: call, method: "<android.location.Location: double getLatitude()>", index: result }
+  - { kind: call, method: "<android.location.Location: double getLongitude()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getDeviceId()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getLine1Number()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getNetworkCountryIso()>", index: result }
+  - { kind: call, method: "<java.util.Locale: java.lang.String getCountry()>", index: result }
+  - { kind: call, method: "<java.util.Locale: java.lang.String getLanguage()>", index: result }
+
+# TaintBench
+  - { kind: call, method: "<android.accounts.AccountManager: android.accounts.Account[] getAccounts()>", index: result }
+  - { kind: call, method: "<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>", index: result }
+  - { kind: call, method: "<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)>", index: result }
+  - { kind: call, method: "<android.content.Context: java.lang.Object getSystemService(java.lang.String)>", index: result }
+#  - { kind: call, method: "<android.content.Intent: android.os.Bundle getExtras()>", index: result }
+#  - { kind: call, method: "<android.content.Intent: java.io.Serializable getSerializableExtra(java.lang.String)>", index: result }
+#  - { kind: call, method: "<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>", index: result }
+  - { kind: call, method: "<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)>", index: result }
+  - { kind: call, method: "<android.content.res.AssetManager: java.io.InputStream open(java.lang.String)>", index: result }
+  - { kind: call, method: "<android.database.Cursor: int getInt(int)>", index: result }
+  - { kind: call, method: "<android.database.Cursor: java.lang.String getString(int)>", index: result }
+  - { kind: call, method: "<android.database.Cursor: long getLong(int)>", index: result }
+  - { kind: call, method: "<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>", index: result }
+  - { kind: call, method: "<android.location.Location: double getLongitude()>", index: result }
+  - { kind: call, method: "<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)>", index: result }
+  - { kind: call, method: "<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>", index: result }
+  - { kind: call, method: "<android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>", index: result }
+  - { kind: call, method: "<android.os.Environment: java.io.File getExternalStorageDirectory()>", index: result }
+  - { kind: call, method: "<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>", index: result }
+  - { kind: call, method: "<android.telephony.SmsMessage: java.lang.String getDisplayMessageBody()>", index: result }
+  - { kind: call, method: "<android.telephony.SmsMessage: java.lang.String getDisplayOriginatingAddress()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getDeviceId()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getLine1Number()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getNetworkOperatorName()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSimCountryIso()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>", index: result }
+  - { kind: call, method: "<android.telephony.gsm.GsmCellLocation: int getLac()>", index: result }
+  - { kind: call, method: "<android.telephony.gsm.SmsMessage: android.telephony.gsm.SmsMessage createFromPdu(byte[])>", index: result }
+  - { kind: call, method: "<android.telephony.gsm.SmsMessage: java.lang.String getDisplayMessageBody()>", index: result }
+  - { kind: call, method: "<android.widget.EditText: android.text.Editable getText()>", index: result }
+  - { kind: call, method: "<com.example.bankmanager.BankActivity: android.view.View findViewById(int)>", index: result }
+  - { kind: call, method: "<com.google.elements.Utils: java.lang.String getDeviceId()>", index: result }
+  - { kind: call, method: "<exts.whats.activities.Cards: android.view.View findViewById(int)>", index: result }
+  - { kind: call, method: "<frhfsd.siksdk.ujdsfjkfsd.WrehifsdkjsActivity: android.database.Cursor managedQuery(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>", index: result }
+  - { kind: call, method: "<java.io.File: java.io.File[] listFiles()>", index: result }
+  - { kind: call, method: "<java.io.File: void <init>(java.io.File,java.lang.String)>", index: result }
+  - { kind: call, method: "<java.io.File: void <init>(java.lang.String)>", index: base }
+  - { kind: call, method: "<java.io.FileInputStream: void <init>(java.io.File)>", index: result }
+  - { kind: call, method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: result }
+  - { kind: call, method: "<java.net.HttpURLConnection: java.io.InputStream getInputStream()>", index: result }
+  - { kind: call, method: "<java.net.URL: java.io.InputStream openStream()>", index: result }
+  - { kind: call, method: "<org.apache.http.HttpEntity: java.io.InputStream getContent()>", index: result }
+
+sinks:
+  - { method: "<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>", index: 2 }
+#  - { method: "<java.io.BufferedWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<java.io.OutputStream: void write(byte[])>", index: 0 }
+  - { method: "<java.io.Writer: void write(java.lang.String)>", index: 0 }
+
+# TaintBench
+  - { method: "<android.content.ContentValues: void put(java.lang.String,java.lang.String)>", index: 0 }
+  - { method: "<android.content.ContentValues: void put(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])>", index: 0 }
+  - { method: "<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>", index: 0 }
+  - { method: "<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>", index: 2 }
+  - { method: "<android.telephony.gsm.SmsManager: void sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList)>", index: 2 }
+  - { method: "<android.telephony.gsm.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>", index: 2 }
+  - { method: "<android.util.Log: int i(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>", index: 0 }
+  - { method: "<java.io.BufferedWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<java.io.DataOutputStream: void flush()>", index: base }
+  - { method: "<java.io.DataOutputStream: void write(byte[])>", index: 0 }
+  - { method: "<java.io.DataOutputStream: void write(byte[],int,int)>", index: 0 }
+  - { method: "<java.io.DataOutputStream: void writeBytes(java.lang.String)>", index: 0 }
+  - { method: "<java.io.DataOutputStream: void writeUTF(java.lang.String)>", index: 0 }
+  - { method: "<java.io.File: boolean delete()>", index: base }
+  - { method: "<java.io.FileWriter: java.io.Writer append(java.lang.CharSequence)>", index: 0 }
+  - { method: "<java.io.FileWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<java.io.OutputStream: void write(byte[])>", index: 0 }
+  - { method: "<java.io.OutputStream: void write(byte[],int,int)>", index: 0 }
+  - { method: "<java.io.OutputStreamWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: java.io.PrintWriter append(java.lang.CharSequence)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: base }
+  - { method: "<java.net.HttpURLConnection: java.io.InputStream getInputStream()>", index: base }
+  - { method: "<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>", index: 0 }
+  - { method: "<java.net.HttpURLConnection: void connect()>", index: base }
+  - { method: "<java.net.URLConnection: java.io.InputStream getInputStream()>", index: base }
+  - { method: "<java.util.concurrent.ThreadPoolExecutor: java.util.concurrent.Future submit(java.lang.Runnable)>", index: 0 }
+  - { method: "<javax.mail.Transport: void sendMessage(javax.mail.Message,javax.mail.Address[])>", index: 0 }
+  - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: 0 }
+  - { method: "<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: 0 }
+  - { method: "<org.mozilla.javascript.Function: java.lang.Object call(org.mozilla.javascript.Context,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable,java.lang.Object[])>", index: "3[*]" }
+  - { method: "<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class,java.lang.Object[])>", index: 0 }
+  - { method: "<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>", index: 0 }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: 2 }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base.value }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base.value, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: base, to: result }
+  - { method: "<java.lang.Double: java.lang.String toString(double)>", from: 0, to: result }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: 0, to: base }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: 0, to: result }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: base, to: result }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.Integer: int parseInt(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.Long: long parseLong(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.CharSequence: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String valueOf(double)>", from: 0, to: result }
+  - { method: "<java.lang.Float: java.lang.Float valueOf(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: byte[] getBytes()>", from: base, to: "result[*]" }
+  - { method: "<org.apache.http.entity.StringEntity: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<org.apache.http.client.methods.HttpPost: void setEntity(org.apache.http.HttpEntity)>", from: 0, to: base }
+  - { method: "<java.util.Formatter: java.util.Formatter format(java.lang.String,java.lang.Object[])>", from: "1[*]", to: base }
+  - { method: "<java.util.Formatter: void <init>(java.lang.Appendable)>", from: base, to: 0 }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: "0[*]", to: base }
+  - { method: "<android.graphics.PointF: void <init>(float,float)>", from: 0, to: base.x }
+  - { method: "<android.graphics.PointF: void <init>(float,float)>", from: 1, to: base.y }
+  - { method: "<java.lang.Float: float floatValue()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String substring(int,int)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: base, to: result }
+  - { method: "<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>", from: 0, to: result }
+  - { method: "<java.util.regex.Matcher: java.lang.String group(int)>", from: base, to: result }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: "2[*]" }
+  - { method: "<java.lang.StringBuilder: void getChars(int,int,char[],int)>", from: base, to: "2[*]" }
+  - { method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", from: "0[*]", to: base }
+  - { method: "<java.io.ByteArrayOutputStream: java.lang.String toString()>", from: base, to: result }
+
+# UBCBench
+# 20
+  - { method: "<java.lang.CharSequence: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: base, to: result }
+  - { method: "<android.net.Uri$Builder: android.net.Uri$Builder appendQueryParameter(java.lang.String,java.lang.String)>", from: 1, to: result }
+  - { method: "<android.net.Uri$Builder: android.net.Uri build()>", from: base, to: result }
+  - { method: "<android.net.Uri: java.lang.String getEncodedQuery()>", from: base, to: result }
+# 21
+  - { method: "<android.database.Cursor: java.lang.String getString(int)>", from: base, to: result }
+  - { method: "<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>", from: 0, to: base }
+  - { method: "<org.json.JSONArray: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.String: byte[] getBytes(java.lang.String)>", from: base, to: result }
+
+# taint-bench
+  - { method: "<android.telephony.SmsMessage: java.lang.String getMessageBody()>", from: base, to: result }
+#  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: result, to: base}
+
+sanitizers:
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", index: base }
+
+call-site-mode: true

@@ -1,0 +1,92 @@
+sources:
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getImei()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getDeviceId()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>", index: result }
+  - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>", index: result }
+  - { kind: call, method: "<android.location.Location: double getLatitude()>", index: result }
+  - { kind: call, method: "<android.location.Location: double getLongitude()>", index: result }
+
+sinks:
+  - { method: "<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>", index: 2 }
+  - { method: "<android.util.Log: int i(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<android.util.Log: int d(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<android.util.Log: int v(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<android.util.Log: int e(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<java.net.URL: java.net.URLConnection openConnection()>", index: base }
+  - { method: "<java.lang.ProcessBuilder: java.lang.Process start()>", index: base }
+  # Different method signatures for different jdk versions
+  - { method: "<java.io.OutputStreamWriter: java.io.Writer append(java.lang.CharSequence)>", index: 0 }
+  - { method: "<java.io.Writer: java.io.Writer append(java.lang.CharSequence)>", index: 0 }
+  - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: 0 }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: 2 }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: base, to: result }
+  - { method: "<java.lang.Double: java.lang.String toString(double)>", from: 0, to: result }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: 0, to: base }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: 0, to: result }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: base, to: result }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.Integer: int parseInt(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.Long: long parseLong(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.CharSequence: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String valueOf(double)>", from: 0, to: result }
+  - { method: "<java.lang.Float: java.lang.Float valueOf(java.lang.String)>", from: 0, to: result }
+  - { method: "<java.lang.String: byte[] getBytes()>", from: base, to: "result[*]" }
+  - { method: "<org.apache.http.entity.StringEntity: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<org.apache.http.client.methods.HttpPost: void setEntity(org.apache.http.HttpEntity)>", from: 0, to: base }
+  - { method: "<java.util.Formatter: java.util.Formatter format(java.lang.String,java.lang.Object[])>", from: "1[*]", to: base }
+  - { method: "<java.util.Formatter: void <init>(java.lang.Appendable)>", from: base, to: 0 }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", from: "0[*]", to: base }
+  - { method: "<android.graphics.PointF: void <init>(float,float)>", from: 0, to: base.x }
+  - { method: "<android.graphics.PointF: void <init>(float,float)>", from: 1, to: base.y }
+  - { method: "<java.lang.Float: float floatValue()>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String substring(int,int)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: base, to: result }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: base, to: result }
+  - { method: "<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>", from: 0, to: result }
+  - { method: "<java.util.regex.Matcher: java.lang.String group(int)>", from: base, to: result }
+  - { method: "<java.lang.String: void getChars(int,int,char[],int)>", from: base, to: "2[*]" }
+  - { method: "<java.lang.StringBuilder: void getChars(int,int,char[],int)>", from: base, to: "2[*]" }
+  - { method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", from: "0[*]", to: base }
+  - { method: "<java.io.ByteArrayOutputStream: java.lang.String toString()>", from: base, to: result }
+
+sanitizers:
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(double)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(float)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", index: base }
+  - { kind: base, method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", index: base }
+
+call-site-mode: true
