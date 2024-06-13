@@ -162,7 +162,9 @@ transfers:
 # 20
   - { method: "<java.lang.CharSequence: java.lang.String toString()>", from: base, to: result }
   - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: base, to: result }
+  - { method: "<android.net.Uri$Builder: android.net.Uri$Builder appendQueryParameter(java.lang.String,java.lang.String)>", from: 1, to: base }
   - { method: "<android.net.Uri$Builder: android.net.Uri$Builder appendQueryParameter(java.lang.String,java.lang.String)>", from: 1, to: result }
+  - { method: "<android.net.Uri$Builder: android.net.Uri$Builder appendQueryParameter(java.lang.String,java.lang.String)>", from: base, to: result }
   - { method: "<android.net.Uri$Builder: android.net.Uri build()>", from: base, to: result }
   - { method: "<android.net.Uri: java.lang.String getEncodedQuery()>", from: base, to: result }
 # 21
@@ -175,7 +177,7 @@ transfers:
 # taint-bench
   - { method: "<android.telephony.SmsMessage: java.lang.String getMessageBody()>", from: base, to: result }
 #  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: result, to: base}
-
+  - { method: "<java.lang.StringBuilder: void <init>(java.lang.String)>", from: 0, to: base }
 sanitizers:
   - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", index: base }
   - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", index: base }
