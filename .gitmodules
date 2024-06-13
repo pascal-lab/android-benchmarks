@@ -6,3 +6,7 @@
 	path = DroidBench
 	url = ../DroidBench.git
 	branch = develop
+[submodule "UBCBench"]
+	path = UBCBench
+	url = ../UBCBench.git
+	branch = master
