@@ -13,3 +13,4 @@
 [submodule "ICC-Bench"]
 	path = ICC-Bench
 	url = ../ICC-Bench.git
+	branch = master
