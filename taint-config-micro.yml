@@ -5,6 +5,7 @@ sources:
   - { kind: call, method: "<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>", index: result }
   - { kind: call, method: "<android.location.Location: double getLatitude()>", index: result }
   - { kind: call, method: "<android.location.Location: double getLongitude()>", index: result }
+  - { kind: call, method: "<android.widget.EditText: android.text.Editable getText()>", index: result }
 
 sinks:
   - { method: "<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>", index: 2 }
@@ -78,6 +79,7 @@ transfers:
   - { method: "<java.lang.StringBuilder: void getChars(int,int,char[],int)>", from: base, to: "2[*]" }
   - { method: "<java.io.ByteArrayOutputStream: void write(byte[],int,int)>", from: "0[*]", to: base }
   - { method: "<java.io.ByteArrayOutputStream: java.lang.String toString()>", from: base, to: result }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: base, to: result }
 
 sanitizers:
   - { kind: base, method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", index: base }

@@ -16,20 +16,165 @@
 - id: UBCBench-25
   apk: UBCBench/25.ma.coderoute.hzpermispro.apk
 
+- id: TaintBench-backflash
+  apk: TaintBench/backflash.apk
+
 - id: TaintBench-beita_com_beita_contact
   apk: TaintBench/beita_com_beita_contact.apk
 
 - id: TaintBench-cajino_baidu
   apk: TaintBench/cajino_baidu.apk
 
+- id: TaintBench-chat_hook
+  apk: TaintBench/chat_hook.apk
+
+- id: TaintBench-chulia
+  apk: TaintBench/chulia.apk
+
 - id: TaintBench-death_ring_materialflow
   apk: TaintBench/death_ring_materialflow.apk
+
+- id: TaintBench-dsencrypt_samp
+  apk: TaintBench/dsencrypt_samp.apk
+
+- id: TaintBench-exprespam
+  apk: TaintBench/exprespam.apk
+
+- id: TaintBench-fakeappstore
+  apk: TaintBench/fakeappstore.apk
+
+- id: TaintBench-fakebank_android_samp
+  apk: TaintBench/fakebank_android_samp.apk
+
+- id: TaintBench-fakedaum
+  apk: TaintBench/fakedaum.apk
+
+- id: TaintBench-fakemart
+  apk: TaintBench/fakemart.apk
+
+- id: TaintBench-fakeplay
+  apk: TaintBench/fakeplay.apk
+
+- id: TaintBench-faketaobao
+  apk: TaintBench/faketaobao.apk
+
+- id: TaintBench-godwon_samp
+  apk: TaintBench/godwon_samp.apk
+
+- id: TaintBench-hummingbad_android_samp
+  apk: TaintBench/hummingbad_android_samp.apk
+
+- id: TaintBench-jollyserv
+  apk: TaintBench/jollyserv.apk
+
+- id: TaintBench-overlay_android_samp
+  apk: TaintBench/overlay_android_samp.apk
+
+- id: TaintBench-overlaylocker2_android_samp
+  apk: TaintBench/overlaylocker2_android_samp.apk
+
+- id: TaintBench-phospy
+  apk: TaintBench/phospy.apk
+
+- id: TaintBench-proxy_samp
+  apk: TaintBench/proxy_samp.apk
+
+- id: TaintBench-remote_control_smack
+  apk: TaintBench/remote_control_smack.apk
+
+- id: TaintBench-repane
+  apk: TaintBench/repane.apk
+
+- id: TaintBench-roidsec
+  apk: TaintBench/roidsec.apk
+
+- id: TaintBench-samsapo
+  apk: TaintBench/samsapo.apk
+
+- id: TaintBench-save_me
+  apk: TaintBench/save_me.apk
+
+- id: TaintBench-scipiex
+  apk: TaintBench/scipiex.apk
+
+- id: TaintBench-slocker_android_samp
+  apk: TaintBench/slocker_android_samp.apk
+
+- id: TaintBench-sms_google
+  apk: TaintBench/sms_google.apk
+
+- id: TaintBench-sms_send_locker_qqmagic
+  apk: TaintBench/sms_send_locker_qqmagic.apk
+
+- id: TaintBench-smssend_packageInstaller
+  apk: TaintBench/smssend_packageInstaller.apk
 
 - id: TaintBench-smssilience_fake_vertu
   apk: TaintBench/smssilience_fake_vertu.apk
 
+- id: TaintBench-smsstealer_kysn_assassincreed_android_samp
+  apk: TaintBench/smsstealer_kysn_assassincreed_android_samp.apk
+
+- id: TaintBench-stels_flashplayer_android_update
+  apk: TaintBench/stels_flashplayer_android_update.apk
+
+- id: TaintBench-tetus
+  apk: TaintBench/tetus.apk
+
+- id: TaintBench-the_interview_movieshow
+  apk: TaintBench/the_interview_movieshow.apk
+
 - id: TaintBench-threatjapan_uracto
   apk: TaintBench/threatjapan_uracto.apk
 
+- id: TaintBench-vibleaker_android_samp
+  apk: TaintBench/vibleaker_android_samp.apk
+
 - id: TaintBench-xbot_android_samp
   apk: TaintBench/xbot_android_samp.apk
+
+# reflection crash in no-ssa
+- id: Androzoo-1
+  apk: Androzoo/34539FC56B376A1208F79F9C1BCC07CFF13B0E9B65997640615917B2EBBF00FF.apk
+
+# reflection:string-constant too slow
+- id: Androzoo-2
+  apk: Androzoo/B3DB5121494D96AA6EB12150F25C655F40DB04C94BBB777653C5F781E738689D.apk
+
+# reflection:string only-app crash
+- id: Androzoo-3
+  apk: Androzoo/4A533E42270532C9362BF03CCFFB879B2099124226B5127C284C04D680EF22C1.apk
+
+# reflection:string whole not-found field
+- id: Androzoo-4
+  apk: Androzoo/CED0EEF3B4E844027228BA622C5EAD2B308C4B4143142964AD87FF3C53D48C4C.apk
+
+# reflection:string whole not-found field
+- id: Androzoo-5
+  apk: Androzoo/FAC3195193648C6602BD1076120307908175BE2B703ED912AD3763E83135B582.apk
+
+# reflection:string-constant too slow
+- id: Androzoo-6
+  apk: Androzoo/611BE8CECBADE7838CEB236A42960FC507152DB3E349DF155C4A066BEC714BF0.apk
+
+# crash in frontend
+- id: Androzoo-7
+  apk: Androzoo/341228469DF73D202E36BF2245B484BA84F84A5252BBF975451168954ED075BA.apk
+
+- id: Androzoo-t1
+  apk: Androzoo/C5ABB4CD3286296C8FCBB5846CA53F7E46A32C10CA25BFD52D8B335F6D6415B6.apk
+
+- id: Androzoo-t2
+  apk: Androzoo/FEA061AF187FDEBBF223DD84A54FE57005F4F9115D9427920DE8B28F34677D6E.apk
+
+- id: Androzoo-t3
+  apk: Androzoo/EF1F669558101985F89CD520E9364B801EC2EED23A80F931B83C7B5F7D129739.apk
+
+- id: Androzoo-t4
+  apk: Androzoo/D13F972EE40C3EB475875B9A41E20CE39A849030310F25999707C3D92259E60E.apk
+
+- id: Androzoo-t5
+  apk: Androzoo/CC316C10818ED3BF65B8536B2556F527AEFD62D1E6C2638154653BCF3CE71A09.apk
+
+- id: Androzoo-t6
+  apk: Androzoo/059E29250F5B7C12F2B5BE5EE12C9781F2A3E09AAD75A2F66BFC829C8D437B5F.apk
